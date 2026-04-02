@@ -1,14 +1,22 @@
 public class helloapp {
     public static void main(String[] args) {
 
-        // Check if arguments are passed
         if (args.length > 0) {
-            // Enhanced for loop to iterate through arguments
+            String result = "Hello ";
+
+            // Append each argument with a comma
             for (String name : args) {
-                System.out.println("Hello " + name);
+                result += name + ", ";
             }
+
+            // Remove the trailing ", " using substring
+            result = result.substring(0, result.length() - 2);
+
+            // Print final result
+            System.out.println(result);
+
         } else {
-            // Default message if no arguments are provided
+            // Default message
             System.out.println("Hello User");
         }
     }
